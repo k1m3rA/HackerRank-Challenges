@@ -2,8 +2,11 @@
 #include <stdlib.h>
 
 void update(int *a,int *b) {
-    int *a = *a + *b;
-    int *b = abs(*a - *b);
+    int sum = *a + *b;
+    int sus = abs((*a - *b));
+
+    *a = sum;
+    *b = sus;
 }
 
 int main() {
@@ -11,7 +14,7 @@ int main() {
     int *pa = &a, *pb = &b;
     
     scanf("%d %d", &a, &b);
-    update(pa, pb);
+    update(pa, pb); /* pa and pb without * is the address of the pointer. By passing them to the function we are defining int *a = &a and int *b = &b in the update() function */
     printf("%d\n%d", a, b);
 
     return 0;
