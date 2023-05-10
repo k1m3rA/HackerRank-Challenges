@@ -3,10 +3,9 @@
 
 void update(int *a,int *b) {
     int sum = *a + *b;
-    int sus = abs((*a - *b));
-
+    
+    *b = abs((*a - *b));
     *a = sum;
-    *b = sus;
 }
 
 int main() {
