@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int max(int a, int b) {
-    /* return a > b ? a : b;    --->   using conditional statements */
-    return a * (a>b) + b * (b>a); /* if a>b then it equals true == 1, and b>a == false == 0  */
+    return a > b ? a : b; /* using conditional statements */
+    /* return a * (a>b) + b * (b>a); /* without using cond. statements */
 }
 
 int max_of_four(int a, int b, int c, int d) {
