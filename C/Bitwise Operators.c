@@ -6,7 +6,28 @@
 
 
 void calculate_the_maximum(int n, int k) {
-  //Write your code here.
+
+  int max_and = 0, max_or = 0, max_xor = 0;
+
+  for (int i = 1; i < n; i++){
+    for (int j = i + 1; j <= n; j++){
+
+      if ((i & j) > max_and && (i & j) < k){
+        max_and = i & j;
+      }
+
+      if ((i | j) > max_or && (i | j) < k){
+        max_or = i | j;
+      } 
+
+      if ((i ^ j) > max_xor && (i ^ j) < k){
+        max_xor = i ^ j;
+      } 
+
+    } 
+  }
+
+  printf("%d\n%d\n%d\n", max_and, max_or, max_xor);
 }
 
 int main() {
