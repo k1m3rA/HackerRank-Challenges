@@ -12,17 +12,11 @@ void calculate_the_maximum(int n, int k) {
   for (int i = 1; i < n; i++){
     for (int j = i + 1; j <= n; j++){
 
-      if ((i & j) > max_and && (i & j) < k){
-        max_and = i & j;
-      }
+      ((i & j) > max_and && (i & j) < k) ? max_and = i & j : max_and;
 
-      if ((i | j) > max_or && (i | j) < k){
-        max_or = i | j;
-      } 
+      ((i | j) > max_or && (i | j) < k) ?  max_or = i | j : max_or;
 
-      if ((i ^ j) > max_xor && (i ^ j) < k){
-        max_xor = i ^ j;
-      } 
+      ((i ^ j) > max_xor && (i ^ j) < k) ? max_xor = i ^ j : max_xor;
 
     } 
   }
