@@ -20,6 +20,8 @@ int main()
             j_axis = j - (j >= n) * 2 * (j - n + 1);
             aux_matrix =  (i_axis >= j_axis) * (i_axis - j_axis);
             printf("%d ", main_matrix + aux_matrix);
+
+            /* one liner: ((i >= n) * 2 + abs(n - i)) + ((i - (i >= n) * 2 * (i - n + 1)) >= (j - (j >= n) * 2 * (j - n + 1))) * ((i - (i >= n) * 2 * (i - n + 1)) - (j - (j >= n) * 2 * (j - n + 1)))*/
         }
         printf("\n");
     } 
