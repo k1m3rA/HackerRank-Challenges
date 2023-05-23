@@ -78,7 +78,7 @@ char* readline() {
     }
 
     if (data[data_length - 1] == '\n') {
-        /*  establece el último carácter de la cadena data como el carácter nulo ('\0') */
+        /*  establish the last char of the string as null ('\0') */
         data[data_length - 1] = '\0';
     }
 
